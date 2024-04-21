@@ -110,7 +110,7 @@ public class ReflectionSerializationTests
     public void ShouldThrowWithUnknownIntegerValues()
     {
         // Arrange
-        const string json = "{\"ReflectionPropertyA\":0,\"ReflectionPropertyB\":2}";
+        const string json = "{\"ReflectionPropertyA\":0,\"ReflectionPropertyB\":3}";
 
         // Act
         var act = () => _ = JsonSerializer.Deserialize<ReflectionPoco>(json, Options);

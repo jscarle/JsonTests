@@ -14,4 +14,7 @@ public enum ReflectionEnum
 
     [JsonPropertyName("reflection value b")]
     ReflectionValueB = 1,
+
+    [JsonPropertyName("ReflectionValueC")]
+    ReflectionValueC = 2,
 }

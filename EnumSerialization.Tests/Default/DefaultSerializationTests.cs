@@ -37,7 +37,7 @@ public class DefaultSerializationTests
     public void ShouldDeserializeIncorrectlyWithUnknownIntegerValue()
     {
         // Arrange
-        const string json = "{\"DefaultPropertyA\":0,\"DefaultPropertyB\":2}";
+        const string json = "{\"DefaultPropertyA\":0,\"DefaultPropertyB\":3}";
 
         // Act
         var poco = JsonSerializer.Deserialize<DefaultPoco>(json)!;

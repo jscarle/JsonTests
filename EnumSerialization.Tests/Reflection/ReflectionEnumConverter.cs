@@ -45,11 +45,11 @@ public class ReflectionEnumConverter<TEnum> : JsonConverter<TEnum>
             var defaultStringValue = FormatName(name, options);
             var customStringValue = attribute?.Name;
 
-            _enumToString.Add(value, customStringValue ?? defaultStringValue);
-            _stringToEnum.Add(defaultStringValue, value);
+            _enumToString.TryAdd(value, customStringValue ?? defaultStringValue);
+            _stringToEnum.TryAdd(defaultStringValue, value);
             if (customStringValue is not null)
-                _stringToEnum.Add(customStringValue, value);
-            _numberToEnum.Add(underlyingValue, value);
+                _stringToEnum.TryAdd(customStringValue, value);
+            _numberToEnum.TryAdd(underlyingValue, value);
         }
     }
 

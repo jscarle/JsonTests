@@ -10,4 +10,5 @@ public enum DefaultEnum
 {
     DefaultValueA = 0,
     DefaultValueB = 1,
+    DefaultValueC = 2,
 }

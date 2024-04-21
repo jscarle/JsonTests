@@ -22,4 +22,7 @@ public enum AotEnum
 
     [JsonPropertyName("aot value b")]
     AotValueB = 1,
+
+    [JsonPropertyName("AotValueC")]
+    AotValueC = 2,
 }
