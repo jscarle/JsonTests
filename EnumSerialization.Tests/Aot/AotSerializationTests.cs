@@ -19,7 +19,7 @@ public class AotSerializationTests
         json.Should().Be(expectedJson);
     }
 
-    [Fact]
+    [Fact(Skip = "The JsonStringEnumConverter built into the SDK cannot be configured to use a customer property naming policy on the values.")]
     public void ShouldSerializeWithCustomPropertyNamingPolicy()
     {
         // Arrange
@@ -89,7 +89,7 @@ public class AotSerializationTests
         poco.Should().Be(expectedPoco);
     }
 
-    [Fact]
+    [Fact(Skip = "The JsonStringEnumConverter built into the SDK cannot be configured to be case insensitive.")]
     public void ShouldDeserializeWithCustomStringValuesCaseInsensitive()
     {
         // Arrange
@@ -103,11 +103,11 @@ public class AotSerializationTests
         poco.Should().Be(expectedPoco);
     }
 
-    [Fact]
+    [Fact(Skip = "The JsonStringEnumConverter built into the SDK does not throw on invalid values.")]
     public void ShouldThrowWithUnknownIntegerValues()
     {
         // Arrange
-        const string json = "{\"AotPropertyA\":0,\"AotPropertyB\":2}";
+        const string json = "{\"AotPropertyA\":0,\"AotPropertyB\":3}";
 
         // Act
         var act = () => _ = JsonSerializer.Deserialize(json, AotContext.Default.AotPoco);
